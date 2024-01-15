@@ -1,0 +1,55 @@
+// fonts variable
+$heading-font: 'Raleway', sans-serif !default;
+$body-font: 'Inter', sans-serif!default;
+
+// color variable
+:root {
+  --heading-color: #000;
+  --body-color: #0C0C0C;
+  --primary-color: #2332DD;
+  --secondary-color: #ABFB4F;
+  --white-color: #ffffff;
+  --gray-color: #414141;
+  --light-color: #E6E6E6;
+  --dark-bg: #000000;
+  --blue-bg: #0000FF;
+  --light-bg: #FAFAFA;
+  --white-bg: #fff;
+}
+
+$colors: (
+ 
+);
+
+$bodyfontScale: (
+  xl: (
+    20: 20px,
+    lineheight: 32px,
+  ),
+  lg: (
+    18: 18px,
+    lineheight: 28px,
+  ),
+  md: (
+    16: 16px,
+    lineheight: 24px,
+  ),
+  xs: (
+    14: 14px,
+    lineheight: 22px,
+  ),
+  xss: (
+    12: 12px,
+    lineheight: 20px,
+  ),
+);
+
+// button font size
+$button_color: var(--white-color);
+$button_font_size: 16px;
+$buton_line_height: 24px;
+$buton_border_radius: 3px;
+$button_padding: 18px 40px;
+$button_font_weight: 700;
+$button_font_family: $body-font;
+

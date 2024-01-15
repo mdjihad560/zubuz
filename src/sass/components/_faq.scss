@@ -1,0 +1,96 @@
+
+
+.zubuz-accordion{
+  &-wrap{
+    margin-right: 65px;
+    @include max(1199px) {
+      margin-right: 20px;
+    }
+    @include max(991px) {
+      margin-top: 40px;
+    }
+  }
+  &-item{
+    padding: 23px 24px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: all 0.4s;
+    border: 1px solid var(--light-color);
+    background-color: var(--light-bg);
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.open .azubuz-active-icon{
+      transform: rotate(180deg);
+      svg{
+        path{
+          stroke: var(--secondary-color);
+        }
+      }
+    }
+    &.open{
+      background-color: var(--dark-bg);
+      .zubuz-accordion-body{
+        display: block;
+        color: var(--white-color);
+      }
+      .zubuz-accordion-header{
+        h3{
+          color: var(--secondary-color);
+        }
+      }
+    }
+  }
+  &-header{
+    cursor: pointer;
+    position: relative;
+    h3{
+      @include max(767px) {
+        font-size: 24px;
+        padding-right: 25px;
+      }
+    }
+    
+    // &::before{
+    //   content: "";
+    //   position: absolute;
+    //   right: 0;
+    //   transition: all .4s;
+    //   background-image: url(../images/icon/arrow-bottm.svg);
+    //   background-size: 30px;
+    //   background-position: center;
+    //   width: 30px;
+    //   height: 24px;
+    //   top: 10px;
+    //   z-index: 2;
+    //   background-repeat: no-repeat;
+    //   @include max(767px) {
+    //     top: 5px;
+    //   }
+    // }
+   
+  }
+  &-body{
+    display: none;
+    padding-top: 15px;
+    &.default{
+      display: block;
+    }
+    @include max(991px) {
+      padding: 24px 0 0;
+    }
+  }
+}
+
+.azubuz-active-icon {
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  transition: all 0.4s;
+  svg{
+    path{
+      transition: all 0.4s;
+    }
+  }
+}

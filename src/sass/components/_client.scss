@@ -1,0 +1,18 @@
+.zubuz-brand-logo-content{
+  margin-right: 30px;
+  @include max(991px) {
+    margin: 0 0 30px;
+    text-align: center;
+  }
+  h3{
+    font-weight: 600;
+    color:var(--white-color)
+  }
+}
+.zubuz-brand-item {
+  padding: 0 20px;
+}
+.zubuz-brand-slider2{
+  direction: rtl;
+  margin-top: 30px;
+}

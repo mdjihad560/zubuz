@@ -1,0 +1,51 @@
+.zubuz-blog{
+  &-wrap{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--heading-color);
+    &:hover .zubuz-blog-thumb img{
+      transform: scale(1.08);
+    }
+    &:hover .zubuz-blog-btn path{
+      stroke: var(--primary-color);
+    }
+  }
+  &-categorie {
+    top: 24px;
+    right: 24px;
+    padding: 10.5px 19px;
+    line-height: 1;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 700;
+    position: absolute;
+    color: var(--heading-color);
+    background-color: var(--secondary-color);
+  }
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.4s;
+    }
+  }
+  &-data{
+    padding: 24px;
+    p{
+      margin-bottom: 10px;
+    }
+    h3 {
+      margin-bottom: 25px;
+    }
+  }
+  &-btn{
+    path{
+      transition: all 0.4s;
+    }
+  }
+}

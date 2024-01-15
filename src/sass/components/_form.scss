@@ -1,0 +1,187 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+input[type="search"],
+input, textarea {
+  margin: 0;
+  height: 60px;
+  width: 100%;
+  color:var(--body-color);
+  font-size: 16px;
+  border-radius: 10px;
+  background-color: transparent;
+  padding: 15px 24px !important;
+  border: none!important;
+  transition: all 0.4s;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--light-color)!important;
+}
+// input:focus, 
+// textarea:focus{
+//   border: 1px solid var(--accent-color)!important;
+// }
+textarea {
+  height: 200px;
+  resize: none;
+  border-radius: 20px;
+  @include max(767px) {
+    height: 100px;
+  }
+}
+
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+    color:    var(--body-color);
+    opacity: 1;
+}
+input:-moz-placeholder, 
+textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+   color:    var(--body-color);
+   opacity:  1;
+}
+input::-moz-placeholder, 
+textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
+   color:    var(--body-color);
+   opacity:  1;
+}
+input:-ms-input-placeholder, 
+textarea:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+   color:    var(--body-color);
+   opacity: 1;
+}
+input::-ms-input-placeholder, 
+textarea::-ms-input-placeholder{ /* Microsoft Edge */
+   color:    var(--body-color);
+   opacity: 1;
+}
+
+input::placeholder, 
+textarea::placeholder{ /* Most modern browsers support this now. */
+   color:    var(--body-color);
+   opacity: 1;
+}
+
+// .zubuz-subscribe{
+//    &-wrap{
+//       @include max(991px) {
+//          margin-top: 50px;
+//        }
+//       h4{
+//          margin-bottom: 24px;
+//          color: var(--white-smoke)
+//       }
+//    }
+   
+//    &-field{
+//       margin-bottom: 24px;
+//       input, textarea{
+//       color: #ccc;
+//       border: 1px solid #ccc!important;
+//       &:focus, 
+//       &:focus{
+//          border: 1px solid var(--accent-color)!important;
+//       }
+//       &::-webkit-input-placeholder, 
+//       &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+//          color:    #ccc;
+//          opacity: 1;
+//       }
+//       &:-moz-placeholder, 
+//       &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+//          color:    #ccc;
+//          opacity:  1;
+//       }
+//       &::-moz-placeholder, 
+//       &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+//          color:    #ccc;
+//          opacity:  1;
+//       }
+//       &:-ms-input-placeholder, 
+//       &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+//          color:    #ccc;
+//          opacity: 1;
+//       }
+//       &::-ms-input-placeholder, 
+//       &::-ms-input-placeholder{ /* Microsoft Edge */
+//          color:    #ccc;
+//          opacity: 1;
+//       }
+
+//       &::placeholder, 
+//       &::placeholder{ /* Most modern browsers support this now. */
+//          color:    #ccc;
+//          opacity: 1;
+//       }
+//       }
+
+//       textarea{
+//          height: 150px;
+//          @include max(767px) {
+//             height: 100px;
+//          }
+//       }
+      
+//    }
+// }
+
+
+
+
+.zubuz-subscribe{
+   position: relative;
+      input{
+      height: 50px;
+      border-radius: 3px;
+      color: var(--body-color);
+      border: 1px solid #ccc!important;
+      &:focus, 
+      &:focus{
+         border: 1px solid var(--primary-color)!important;
+      }
+      &::-webkit-input-placeholder, 
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    #666666;
+         opacity: 1;
+      }
+      &:-moz-placeholder, 
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    #666666;
+         opacity:  1;
+      }
+      &::-moz-placeholder, 
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    #666666;
+         opacity:  1;
+      }
+      &:-ms-input-placeholder, 
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    #666666;
+         opacity: 1;
+      }
+      &::-ms-input-placeholder, 
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    #666666;
+         opacity: 1;
+      }
+
+      &::placeholder, 
+      &::placeholder{ /* Most modern browsers support this now. */
+         color:    #666666;
+         opacity: 1;
+      }
+      }
+
+}
+.zubuz-subscription-btn{
+   top: 5px;
+   right: 5px;
+   font-size: 14px;
+   padding: 8px 15px;
+   position: absolute;
+}
+
+// home one footer subscribe 1

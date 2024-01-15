@@ -1,0 +1,32 @@
+.zubuz-cta{
+  &-section{
+    padding-top: 100px;
+    @include max(991px) {
+      padding-top: 80px;
+    }
+  }
+  &-thumb{
+    @include max(991px) {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
+}
+
+.zubuz-app-wrap {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  position: relative;
+  @include max(991px) {
+    justify-content:center;
+  }
+}
+.zubuz-cta-shape{
+  right: 0;
+  position: absolute;
+  animation: float-left-right 6s ease-in-out infinite;
+  @include max(991px) {
+    display: none;
+  }
+}

@@ -1,0 +1,91 @@
+.zubuz-footer{
+  &-top{
+    padding: 130px 0 100px;
+    @include max(991px) {
+      padding: 100px 0;
+    }
+    @include max(767px) {
+      padding: 80px 0;
+    }
+  }
+  &-textarea{
+    @include max(1199px) {
+      max-width: 600px;
+    }
+    img{
+      margin-bottom: 30px;
+    }
+    p{
+      margin-bottom: 50px;
+      @include max(767px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &-title{
+    p{
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: var(--heading-color2);
+      @include max(767px) {
+        margin-bottom: 17px;
+      }
+    }
+    &.light{
+      p{
+        color: var(--white-color);
+      }
+    }
+  }
+  &-menu{
+    @include max(1199px) {
+      margin-top: 40px;
+    }
+    ul{
+      li{
+        margin: 14px 0;
+        &:first-child{
+          margin-top: 0;
+        }
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          font-size: 20px;
+          transition: all 0.4s;
+          color: var(--body-color);
+          &:hover{
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+
+    &.extar-margin{
+      margin-left: 80px;
+      @include max(1199px) {
+        margin-left: 0;
+      }
+    }
+  }
+  //footer bottom
+  &-bottom {
+    display: flex;
+    padding: 33px 0;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--light-color);
+    @include max(767px) {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+.zubuz-copywright{
+  @include max(767px) {
+    margin-top: 20px;
+  }
+  p{
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+.zubuz-iconbox{
+  &-wrap-left{
+    display: flex;
+    max-width: 590px;
+    margin-bottom: 24px;
+    text-align: left;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    .azubuz-iconbox-icon{
+      margin-right: 24px;
+    }
+  }
+  &-icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-shrink: 0;
+    margin-bottom: 30px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+  }
+  &-data{
+    span{
+      font-weight: 600;
+      display: block;
+      margin-bottom: 10px;
+    }
+    h3{
+      margin-bottom: 15px;
+    }
+  }
+  // end iconbox left one
+  &-wrap{
+    &.center{
+      text-align: center;
+      .zubuz-iconbox-icon{
+        margin: 0 auto 30px;
+      }
+    }
+    padding: 30px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    transition: all 0.4s;
+    background-color: var(--white-bg);
+    border: 1px solid var(--light-color);
+    &:hover{
+      border: 1px solid var(--heading-color);
+    }
+  }
+  
+}

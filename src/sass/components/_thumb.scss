@@ -1,0 +1,53 @@
+.zubuz-thumb{
+  position: relative;
+  @include max(991px) {
+    margin-bottom: 35px;
+  }
+  &.thumb-pr{
+    padding-right: 100px;
+    @include max(991px) {
+      padding-right: 0;
+    }
+  }
+  &.thumb-pl{
+    padding-left: 100px;
+    @include max(1300px) {
+      padding-left: 50px;
+    }
+    @include max(991px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.zubuz-thumb-card {
+  position: absolute;
+  bottom: 60px;
+  right: 15px;
+  animation: float-top-bottom  6s ease-in-out infinite;
+  @include max(1199px) {
+    width: 230px;
+  }
+}
+.zubuz-thumb-card2 {
+  position: absolute;
+  bottom: 60px;
+  right: -18%;
+  animation: float-top-bottom  6s ease-in-out infinite;
+  @include max(1300px) {
+    width: 230px;
+    right: 0;
+  }
+}
+
+@keyframes float-top-bottom {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-40px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}

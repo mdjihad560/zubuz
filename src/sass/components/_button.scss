@@ -1,0 +1,157 @@
+// bootstrap button style
+
+.zubuz-default-btn {
+  font-size: $button_font_size;
+  line-height: $buton_line_height;
+  padding: $button_padding;
+  border-radius: $buton_border_radius;
+  font-weight: $button_font_weight;
+  font-family: $button_font_family;
+  color: $button_color;
+  width: fit-content;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  overflow: hidden;
+  background-color: var(--blue-bg);
+  position: relative;
+  z-index: 0;
+  transform-style: preserve-3d;
+  &:hover{
+    color: var(--heading-color);
+    background-color: var(--secondary-color);
+  }
+  span{
+    position: relative;
+    z-index: 10;
+    display: inline-block;
+  }
+    &.zubuz-header-btn{
+      padding: 13px 29px;
+    }
+    &:before, 
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &:before{
+      top: -110%;
+      left: -10%;
+      padding-bottom: 120%;
+      width: 120%;
+      height: 0;
+      border-radius: 50%;
+      background: var(--secondary-color);
+      content: "";
+      -webkit-transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+      transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1),
+      -webkit-transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    }
+    &:hover:before{
+      -webkit-transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+      transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+    }
+    &:after{
+      background: var(--secondary-color);
+      content: "";
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+      -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+      transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1),
+      -webkit-transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
+    }
+    &:hover:after{
+      -webkit-transition-delay: 0.4s;
+      transition-delay: 0.4s;
+      -webkit-transition-timing-function: linear;
+      transition-timing-function: linear;
+      -webkit-transition-duration: 0.05s;
+      transition-duration: 0.05s;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+    &:hover span{
+      -webkit-animation: HaCtvBtn_Exploit_MoveScaleUpInitial 0.3s forwards,
+      HaCtvBtn_Exploit_MoveScaleUpEnd 0.3s forwards 0.3s;
+      animation: HaCtvBtn_Exploit_MoveScaleUpInitial 0.3s forwards,
+      HaCtvBtn_Exploit_MoveScaleUpEnd 0.3s forwards 0.3s;
+    }
+
+  &.disabled,
+  &:disabled {
+    opacity: 1;
+  }
+  &.d-block {
+    width: 100%;
+  }
+  &.pill {
+    border-radius: 50px;
+  }
+  &.btn-icon {
+    padding: 9px 24px;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+
+
+.zubuz-btn-wrap{
+  margin-top: 45px;
+  @include max(991px) {
+    margin-top: 30px;
+    text-align: center;
+  }
+}
+
+
+@-webkit-keyframes HaCtvBtn_Exploit_MoveScaleUpInitial {
+  to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+      transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+  }
+}
+@keyframes HaCtvBtn_Exploit_MoveScaleUpInitial {
+  to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+      transform: translate3d(0, -105%, 0) scale3d(1, 2, 1);
+  }
+}
+@-webkit-keyframes HaCtvBtn_Exploit_MoveScaleUpEnd {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+      transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+  }
+  to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes HaCtvBtn_Exploit_MoveScaleUpEnd {
+  0% {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+      transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+  }
+  to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+  }
+}

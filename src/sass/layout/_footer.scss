@@ -1,4 +1,9 @@
 .zubuz-footer{
+  &-section{
+    &.main-footer{
+      border-top: 1px solid var(--light-color);
+    }
+  }
   &-top{
     padding: 130px 0 100px;
     @include max(991px) {
@@ -16,9 +21,14 @@
       margin-bottom: 30px;
     }
     p{
-      margin-bottom: 50px;
-      @include max(767px) {
+      margin-bottom: 45px;
+      @include max(991px) {
         margin-bottom: 30px;
+      }
+    }
+    &.light{
+      p{
+        color: var(--white-color);
       }
     }
   }
@@ -59,6 +69,33 @@
           }
         }
       }
+      
+    }
+
+    &.light{
+      ul{
+        li{
+          a{
+            color: var(--white-color);
+          }
+        }
+      }
+      
+    }
+    &.info{
+      margin-left: 60px;
+      ul{
+        li{
+          padding-left: 35px;
+          position: relative;
+          img{
+            
+            left: 0;
+            top: 5px;
+            position: absolute;
+          }
+        }
+      }
     }
 
     &.extar-margin{
@@ -79,6 +116,13 @@
       display: block;
       text-align: center;
     }
+    &.center{
+      display: block;
+      text-align: center;
+    }
+    &.light{
+      border-top: 1px solid var(--body-color);
+    }
   }
 }
 .zubuz-copywright{
@@ -87,5 +131,37 @@
   }
   p{
     font-size: 16px;
+  }
+  &.light{
+    color: var(--white-color);
+  }
+}
+
+// footer extra content
+.zubuz-footer-btn {
+  width: 100%;
+  text-align: right;
+  @include max(991px) {
+    text-align: center;
+    margin-top: 40px;
+  }
+}
+
+.zubuz-footer-extra{
+  &-top{
+    padding: 90px 0 120px;
+    border-bottom: 1px solid var(--body-color);
+    @include max(991px) {
+      padding: 90px 0 100px;
+      text-align: center;
+    }
+    @include max(767px) {
+      padding: 70px 0 80px;
+    }
+  }
+  &-title{
+    h2{
+      color: var(--white-color);
+    }
   }
 }

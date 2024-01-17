@@ -21,6 +21,13 @@
   @include max(991px) {
     justify-content:center;
   }
+  
+}
+.zubuz-app{
+  transition: all 0.4s;
+  &:hover{
+    transform: translateY(-3px);
+  }
 }
 .zubuz-cta-shape{
   right: 0;
@@ -29,4 +36,33 @@
   @include max(991px) {
     display: none;
   }
+}
+
+
+.zubuz-cta {
+  &-wrap{
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    border-radius: 40px;
+    @include max(991px) {
+      padding: 80px 20px;
+    }
+    @include max(767px) {
+      padding: 60px 20px;
+    }
+  }
+  &-content{
+    max-width: 700px;
+    margin: 0 auto;
+    h2{
+      margin-bottom: 50px;
+      color: var(--white-color);
+      @include max(991px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  
 }

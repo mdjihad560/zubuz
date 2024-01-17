@@ -17,13 +17,25 @@
       max-width: 1100px;
       margin: 0 auto;
       padding-bottom: 80px;
+      @include max(1400px) {
+        max-width: 800px;
+      }
       p{
         max-width: 930px;
         margin: 0 auto 50px;
+        @include max(991px) {
+          margin: 0 auto 30px;
+        }
       }
+    }
+    @include max(991px) {
+      text-align: center;
     }
     p{
       margin-bottom: 50px;
+      @include max(991px) {
+        margin-bottom: 30px;
+      }
     }
   }
   &-bottom{
@@ -35,7 +47,7 @@
     transform: scale(0);
     opacity: 0;
     visibility: hidden;
-    transition: all 1s ease 1s;
+    transition: all .7s ease .7s;
     @include max(767px) {
       display: none;
     }
@@ -108,8 +120,13 @@
 .zubuz-hero-btn-wrap {
     display: flex;
     align-items: center;
-    justify-content: center;
     column-gap: 24px;
+    &.center{
+      justify-content: center;
+    }
+    @include max(991px) {
+      justify-content: center;
+    }
     @include max(479px) {
       flex-direction: column;
       row-gap: 20px;
@@ -153,3 +170,83 @@
 	}
 }
 // end v1 hero
+
+// start hero v2
+.zubuz_screenfix_right {
+  margin-right: calc((-100vw + 100%)/2);
+  max-width: 1610px;
+  @include max(991px) {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.zubuz-hero {
+  &-section2{
+    position: relative;
+    padding: 170px 0 130px;
+    @include max(991px) {
+      padding: 160px 0 100px;
+    }
+    @include max(767px) {
+      padding: 160px  0 100px;
+    }
+
+    @include max(479px) {
+      padding: 120px 0 100px;
+    }
+  }
+  &-rating{
+    margin-bottom: 20px;
+    ul{
+      display: flex;
+      align-items: center;
+      @include max(991px) {
+        justify-content: center;
+      }
+      li{
+        font-size: 16px;
+        margin-right: 15px;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  &-thumb2{
+    left: 15px;
+    z-index: 0;
+    position: relative;
+    margin-left: 65px;
+    @include max(991px) {
+      left: 0;
+      margin-left: 0;
+      margin-top: 40px;
+    }
+  }
+  
+}
+
+.zubuz-hero-shape2 {
+  top: -15%;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  img{
+    @include max(1250px) {
+      width: 300px;
+    }
+  }
+  @include max(991px) {
+    display: none;
+  }
+}
+.zubuz-hero-shape3 {
+  position: absolute;
+  bottom: -10%;
+  left: -15%;
+  z-index: -1;
+  @include max(767px) {
+    display: none;
+  }
+}

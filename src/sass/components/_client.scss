@@ -16,3 +16,18 @@
   direction: rtl;
   margin-top: 30px;
 }
+
+.zubuz-brand-logo-wrap{
+  p{
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  padding-bottom: 130px;
+  border-bottom: 1px solid var(--light-color);
+  @include max(991px) {
+    padding-bottom: 100px;
+  }
+  @include max(767px) {
+    padding-bottom: 80px;
+  }
+}

@@ -21,10 +21,10 @@ h1,
   letter-spacing: -2px;
   line-height: 1.04em;
   margin-bottom: 24px;
-  @include max(1400px) { 
-    font-size: 90px;
+  @include max(1600px) { 
+    font-size: 98px;
   }
-  @include max(991px) { 
+  @include max(1400px) { 
     font-size: 70px;
   }
   @include max(767px) { 

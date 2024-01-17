@@ -70,7 +70,21 @@
       color: var(--white-color);
     }
   }
+  &.zubuz-two-column-title{
+    @include max(991px) {
+      h2{
+        margin-bottom: 20px;
+      }
+    }
+  }
   
+}
+.zubuz-title-btn {
+  width: 100%;
+  text-align: right;
+  @include max(991px) {
+    text-align: center;
+  }
 }
 
 .zubuz-default-content {

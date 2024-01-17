@@ -1,0 +1,25 @@
+.zubuz-counter{
+  &-wrap{
+    display: flex;
+    gap: 100px;
+    @include max(991px) {
+      justify-content: center;
+      gap: 50px;
+    }
+    @include max(479px) {
+      justify-content: center;
+      gap: 10px;
+    }
+  }
+  &-data{
+    h2{
+      margin-bottom: 5px!important;
+      @include max(479px) {
+        font-size: 48px;
+      }
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}

@@ -11,6 +11,9 @@ header.zubuz-header-section.sticky-menu{
   box-shadow: 0 4px 80px rgba(0,0,0,.1);
   background-color: var(--white-bg);
 }
+header.zubuz-header-section.white-menu.sticky-menu{
+  background-color: var(--dark-bg);
+}
 
 
 .zubuz-header-btn-wrap{

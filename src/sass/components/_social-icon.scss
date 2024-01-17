@@ -21,3 +21,45 @@
     }
   }
 }
+.zubuz-social-icon{
+  &.social-box{
+    ul{
+      li{
+        margin: 0 5px;
+        &:first-child{
+          margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          width: 35px;
+          height: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius:100px;
+          border: 1px solid var(--heading-color);
+          &:hover{
+            color: var(--white-color);
+            background-color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+          }
+        }
+      }
+    }
+    &.social-box-white{
+      ul{
+        li{
+          a{
+            background-color: var(--white-bg);
+            &:hover{
+              background-color: var(--primary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+}

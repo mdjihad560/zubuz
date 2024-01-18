@@ -21,7 +21,7 @@
     &:last-child{
       margin-bottom: 0;
     }
-    &.open .azubuz-active-icon{
+    &.open .zubuz-active-icon{
       transform: rotate(180deg);
       svg{
         path{
@@ -51,24 +51,6 @@
         padding-right: 25px;
       }
     }
-    
-    // &::before{
-    //   content: "";
-    //   position: absolute;
-    //   right: 0;
-    //   transition: all .4s;
-    //   background-image: url(../images/icon/arrow-bottm.svg);
-    //   background-size: 30px;
-    //   background-position: center;
-    //   width: 30px;
-    //   height: 24px;
-    //   top: 10px;
-    //   z-index: 2;
-    //   background-repeat: no-repeat;
-    //   @include max(767px) {
-    //     top: 5px;
-    //   }
-    // }
    
   }
   &-body{
@@ -83,7 +65,52 @@
   }
 }
 
-.azubuz-active-icon {
+
+
+.zubuz-accordion{
+  &-wrap2{
+    .zubuz-accordion-item{
+      background-color: transparent;
+      &.open .zubuz-active-icon{
+        transform: rotate(0);
+        opacity: 0;
+      }
+      &.open .zubuz-inactive-icon{
+        opacity: 1;
+      }
+    }
+    .zubuz-accordion-header{
+      padding-right: 20px;
+      p{
+        font-weight: 600;
+        margin: 0;
+      }
+    }
+    .zubuz-accordion-body{
+      padding-right: 70px;
+      @include max(991px) {
+        padding-right: 0;
+      }
+      p{
+        font-size: 18px;
+        color: var(--body-color)!important;
+      }
+    }
+    .zubuz-accordion-item.open{
+      background-color: transparent;
+    }
+    .zubuz-active-icon, 
+    .zubuz-inactive-icon{
+      top: 0;
+    }
+    .zubuz-inactive-icon{
+      opacity: 0;
+    }
+  }
+}
+
+.zubuz-active-icon, 
+.zubuz-inactive-icon {
   position: absolute;
   top: 5px;
   right: 0px;

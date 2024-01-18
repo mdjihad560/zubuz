@@ -4,23 +4,23 @@
   position: absolute;
   width: 185px;
   height: 185px;
-  background: #000;
   opacity: 0;
   border-radius: 100%;
-  left: -35px;
-  top: -35px;
+  left: -52px;
+  top: -52px;
   z-index: 0;
   -webkit-animation: waves 3s ease-in-out infinite;
   animation: waves 3s ease-in-out infinite;
+  background-color: var(--white-bg);
   z-index: -1;
-  @include max(991px) {
-    width: 160px;
-    height: 160px;
-  }
-  @include max(767px) {
-    width: 130px;
-    height: 130px;
-  }
+  // @include max(991px) {
+  //   width: 160px;
+  //   height: 160px;
+  // }
+  // @include max(767px) {
+  //   width: 130px;
+  //   height: 130px;
+  // }
   &.wave-1 {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
@@ -54,33 +54,44 @@
   }
 }
 
-.zubuz-hero-video-section{
-  @include max(991px) {
-    margin-top: 50px;
+
+
+// img.zubuz-video-icon {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translate(-50%, -50%);
+// }
+// img.zubuz-video-circle{
+//   -webkit-animation: rotate-animation 10s infinite linear;
+//   -moz-animation: rotate-animation 10s infinite linear;
+//   -o-animation: rotate-animation 10s infinite linear;
+//   animation: rotate-animation 10s infinite linear;
+// }
+
+
+.zubuz-video{
+  &-column{
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--light-color);
+    background-color: var(--white-bg);
   }
-  @include max(767px) {
-    margin-top: 30px;
- }
-}
-.zubuz-video-popup3{
-  position: relative;
-  margin-left: 150px;
-  @include max(1300px) {
-    margin: 0;
+  &-wrap{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+    @include max(991px) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
   }
-  
 }
 
-img.zubuz-video-icon {
-  position: absolute;
-  left: 50%;
+.zubuz-review-video {
   top: 50%;
+  left: 50%;
+  position: absolute;
   transform: translate(-50%, -50%);
 }
-img.zubuz-video-circle{
-  -webkit-animation: rotate-animation 10s infinite linear;
-  -moz-animation: rotate-animation 10s infinite linear;
-  -o-animation: rotate-animation 10s infinite linear;
-  animation: rotate-animation 10s infinite linear;
-}
-

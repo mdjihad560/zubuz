@@ -17,10 +17,12 @@ h6,
 }
 h1,
 .h1 {
+  z-index: 0;
   font-size: 110px;
   letter-spacing: -2px;
   line-height: 1.04em;
   margin-bottom: 24px;
+  position: relative;
   @include max(1600px) { 
     font-size: 98px;
   }
@@ -84,7 +86,7 @@ h6,
 }
 
 p{
-  margin-bottom: 25px;
+  margin-bottom: 24px;
   @include max(767px) {
     margin-bottom: 20px;
     font-size: 20px;

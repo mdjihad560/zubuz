@@ -158,8 +158,60 @@ textarea::placeholder{ /* Most modern browsers support this now. */
       }
    }
    }
-}
 
+   &-three{
+      max-width: 500px;
+      margin: 0 auto;
+      position: relative;
+      input{
+      height: 60px;
+      border-radius: 50px;
+      color: var(--body-color);
+      padding-left: 55px!important;
+      border: 1px solid #ccc!important;
+      &:focus, 
+      &:focus{
+         border: 1px solid var(--primary-color)!important;
+      }
+      &::-webkit-input-placeholder, 
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    #666666;
+         opacity: 1;
+      }
+      &:-moz-placeholder, 
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    #666666;
+         opacity:  1;
+      }
+      &::-moz-placeholder, 
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    #666666;
+         opacity:  1;
+      }
+      &:-ms-input-placeholder, 
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    #666666;
+         opacity: 1;
+      }
+      &::-ms-input-placeholder, 
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    #666666;
+         opacity: 1;
+      }
+
+      &::placeholder, 
+      &::placeholder{ /* Most modern browsers support this now. */
+         color:    #666666;
+         opacity: 1;
+      }
+   }
+   }
+}
+.zubuz-input-email {
+   position: absolute;
+   top: 14px;
+   left: 24px;
+}
 .zubuz-subscription-btn{
    top: 5px;
    right: 5px;
@@ -168,7 +220,7 @@ textarea::placeholder{ /* Most modern browsers support this now. */
       font-size: 14px;
       padding: 8px 15px;
    }
-   &.two{
+   &.two, &.three{
       border-radius: 50px;
       font-size: 16px;
       padding: 13px 31px;
@@ -178,8 +230,18 @@ textarea::placeholder{ /* Most modern browsers support this now. */
          width: 100%;
          color: var(--primary-color);
          background-color: var(--white-bg);
+         &:hover{
+            color: var(--heading-color);
+         }
       }
    }
+   @include max(479px) {
+      &.three{
+         color: var(--white-color);
+         background-color: var(--primary-color);
+      }
+   }
+   
    
    
 }

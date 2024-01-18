@@ -91,3 +91,66 @@
     }
   }
 }
+
+.zubuz-v3-thumb {
+  margin-right: 27px;
+  position: relative;
+  img{
+    border-radius: 20px;
+  }
+  @include max(991px) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.zubuz-v3-card {
+  bottom: 40px;
+  left: -100px;
+  width: 65%;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.12);
+  animation: float-top-bottom  6s ease-in-out infinite;
+  img{
+    border-radius: 10px;
+  }
+  @include max(1299px) {
+    left: -20px;
+  }
+  @include max(767px) {
+    display: none;
+  }
+}
+
+.zubuz-v3-thumb2 {
+  margin-left: 30px;
+  position: relative;
+  img{
+    border-radius: 20px;
+  }
+  @include max(991px) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+
+.zubuz-v3-card2{
+  bottom: 55px;
+  left: -20px;
+  width: 65%;
+  overflow: hidden;
+  
+  position: absolute;
+  box-shadow: 0px 2.534px 38.004px 0px rgba(0, 0, 0, 0.12);
+  animation: float-top-bottom  6s ease-in-out infinite;
+  img{
+    border-radius: 10px;
+  }
+  @include max(1299px) {
+    left: -20px;
+  }
+  @include max(767px) {
+    display: none;
+  }
+}

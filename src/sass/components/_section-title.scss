@@ -103,6 +103,18 @@
       color: var(--white-color);
     }
   }
+  &.m-left{
+    margin-left: 70px;
+    @include max(1399px) {
+      margin-left: 0;
+    }
+  }
+  &.m-right{
+    margin-right: 65px;
+    @include max(1399px) {
+      margin-right: 0;
+    }
+  }
 
 }
 .zubuz-extara-mt{

@@ -138,3 +138,45 @@
     }
   }
 }
+
+.zubuz-testimonial-content{
+  ul{
+    margin-bottom: 50px;
+    @include max(1199px) {
+      margin-bottom: 35px;
+    }
+    @include max(767px) {
+      margin-bottom: 20px;
+    }
+    li{
+      display: inline-block;
+    }
+  }
+  p{
+    font-weight: 600;
+    margin-bottom: 45px;
+    @include max(1199px) {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.zubuz-testimonial-authors-wraps {
+  display: flex;
+  gap: 60px;
+  @include max(767px) {
+    gap: 24px;
+  }
+}
+.zubuz-testimonial-authors{
+  p{
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 24px;
+  }
+  span{
+    color: #666;
+    font-size: 16px;
+    letter-spacing: -.5px;
+  }
+}

@@ -60,6 +60,17 @@
         }
       }
     }
+    &.small-box{
+      ul{
+        li{
+          a{
+            width: 30px;
+            height: 30px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
   }
   
 }

@@ -12,31 +12,29 @@
 .zubuz-navigation span.current, 
 .page-links .current {
   cursor: not-allowed;
-  background-color: var(--accent-color);
-  color: var(--heading-color);
-  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
 }
 .zubuz-navigation a, 
 .zubuz-navigation span, 
 .page-links a, 
 .page-links span {
-  height: 50px;
-  width: 50px;
-  display: inline-flex;
-  text-align: center;
-  line-height: 50px;
-  font-size: 21px;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
   margin: 0 5px;
   color: var(--body-color);
-  border-radius: 50px;
+  border-radius: 3px;
+  padding: 9px 18px;
+  width: 50px;
+  text-transform: capitalize;
   border: 1px solid var(--heading-color);
 }
-
+.zubuz-navigation a.next{
+  width: auto;
+}
 .zubuz-navigation a:hover, 
 .page-links a:hover {
-  background-color: var(--accent-color);
-  color: var(--heading-color);
-  border-color: var(--accent-color);
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-color: var(--primary-color);
 }

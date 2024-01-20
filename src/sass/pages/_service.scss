@@ -58,3 +58,11 @@
     margin-top: 30px;
   }
 }
+
+.zubuz-video-service{
+  img{
+    @include max(991px) {
+      width: 75px;
+    }
+  }
+}

@@ -13,14 +13,16 @@
   animation: waves 3s ease-in-out infinite;
   background-color: var(--white-bg);
   z-index: -1;
-  // @include max(991px) {
-  //   width: 160px;
-  //   height: 160px;
-  // }
-  // @include max(767px) {
-  //   width: 130px;
-  //   height: 130px;
-  // }
+  &.waves-2{
+    width: 200px;
+    height: 200px;
+    left: -40px;
+    top: -40px;
+    @include max(991px) {
+      left: -62px;
+      top: -62px;
+    }
+  }
   &.wave-1 {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;

@@ -115,6 +115,15 @@
       margin-right: 0;
     }
   }
+  &.m-right-50{
+    margin-right: 50px;
+    @include max(1399px) {
+      margin-right: 0;
+    }
+    @include max(991px) {
+      margin-bottom: 40px;
+    }
+  }
 
 }
 .zubuz-extara-mt{

@@ -13,19 +13,19 @@ input, textarea {
   color:var(--body-color);
   font-size: 16px;
   border-radius: 10px;
-  background-color: transparent;
+  background-color: var(--white-bg);
   padding: 15px 24px !important;
   border: none!important;
   transition: all 0.4s;
   letter-spacing: 0.5px;
   border: 1px solid var(--light-color)!important;
 }
-// input:focus, 
-// textarea:focus{
-//   border: 1px solid var(--accent-color)!important;
-// }
+input:focus, 
+textarea:focus{
+  border: 1px solid var(--primary-color)!important;
+}
 textarea {
-  height: 200px;
+  height: 150px;
   resize: none;
   border-radius: 20px;
   @include max(767px) {

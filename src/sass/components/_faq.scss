@@ -69,6 +69,7 @@
 
 .zubuz-accordion{
   &-wrap2{
+    margin: 0;
     .zubuz-accordion-item{
       background-color: transparent;
       &.open .zubuz-active-icon{

@@ -1,0 +1,48 @@
+.zubuz-table-wrap{
+  @include max(1199px) {
+    overflow-x: scroll;
+  }
+  table{
+    width: 100%;
+    white-space: nowrap;
+    
+    thead{
+      tr{
+        border-radius: 10px;
+        background-color: var(--dark-bg);
+        th{
+          padding: 30px;
+          font-weight: 600;
+          text-align: center;
+          color: var(--white-color);
+          @include max(1199px) {
+            padding: 24px;
+          }
+          &:first-child{
+            text-align: left;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        border-bottom: 1px solid var(--light-color);
+        &:last-child{
+          border: none;
+        }
+        td{
+          padding: 30px;
+          font-weight: 600;
+          text-align: center;
+          color: var(--heading-color);
+          @include max(1199px) {
+            padding: 24px;
+          }
+          &:first-child{
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
+}

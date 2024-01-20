@@ -521,17 +521,11 @@ a.comment-reply {
   input, 
   textarea{
     margin-bottom: 24px!important;
-    background-color: var(--white-bg)!important;
     &:focus{
       border: 1px solid var(--primary-color)!important;
     }
   }
-  textarea{
-    height: 150px;
-    @include max(767px) {
-      height: 100px;
-    }
-  }
+ 
 }
 button#comment-btn{
   margin-top: 26px;

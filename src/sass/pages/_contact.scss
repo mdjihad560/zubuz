@@ -1,0 +1,19 @@
+.zubuz-main-form{
+  margin-bottom: 24px;
+}
+
+.zubuz-form{
+  &-wrap{
+    padding: 40px;
+    border-radius: 10px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--heading-color);
+    @include max(991px) {
+      padding: 30px;
+      margin-top: 40px;
+    }
+    h3{
+      margin-bottom: 30px;
+    }
+  }
+}

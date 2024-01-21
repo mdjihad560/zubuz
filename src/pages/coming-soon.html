@@ -1,0 +1,52 @@
+
+{% extends "layout/layout.html" %} {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+
+<div class="section zubuz-extra-section">
+  <div class="container">
+    <div class="zubuz-section-title center">
+      <h2>
+        Something great is coming soon! 
+      </h2>
+    </div>
+    <div class="zubuz-countdown-wrap">
+      <div class="zubuz-countdown-item">
+        <div class="countdown-days">
+          <h2 class="number"></h2>
+        </div>
+        <p>Days</p>
+      </div>
+      <div class="zubuz-countdown-item">
+        <div class="countdown-hours">
+          <h2 class="number"></h2>
+        </div>
+        <p>Hours</p>
+      </div>
+      <div class="zubuz-countdown-item">
+        <div class="countdown-minutes">
+          <h2 class="number"></h2>
+        </div>
+        <p>Minutes</p>
+      </div>
+      <div class="zubuz-countdown-item">
+        <div class="countdown-seconds">
+          <h2 class="number"></h2>
+        </div>
+        <p>Seconds</p>
+      </div>
+    </div>
+    <form action="#">
+      <div class="zubuz-coming-newsletter">
+        <input type="email" placeholder="Enter your email">
+        <button type="submit" id="zubuz-notified-btn">Get Notified</button>
+        <p>We do not share your information with any third party & no spam*</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% include "../templates/layout/header-footer/extra-footer.html" %} 
+
+{% endblock %}

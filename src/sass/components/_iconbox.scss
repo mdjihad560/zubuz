@@ -28,6 +28,27 @@
         border: 1px solid var(--secondary-color);
     }
   }
+  &-header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    &-data{
+      h4{
+        margin-bottom: 3px;
+      }
+      p{
+        font-size: 16px;
+      }
+    }
+    .zubuz-iconbox-icon{
+      width: 80px;
+      height: 80px;
+      border: 1px solid var(--light-color);
+      background-color: transparent;
+      margin-bottom: 0;
+    }
+   
+  }
   &-icon{
     width: 60px;
     height: 60px;

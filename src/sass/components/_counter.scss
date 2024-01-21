@@ -27,9 +27,12 @@
       }
       
     }
+    em{
+      font-style: normal;
+      color: var(--secondary-color);
+    }
     &.primary-color{
       em{
-        font-style: normal;
         color: var(--primary-color);
       }
     }

@@ -1,0 +1,52 @@
+
+{% extends "layout/layout.html" %} {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+
+<div class="section zubuz-extra-section">
+  <div class="container">
+    <div class="zubuz-section-title center">
+      <h2>Create Account</h2>
+    </div>
+    <div class="zubuz-account-wrap wow fadeInUpX" data-wow-delay="0.1s">
+      <form action="#">
+        <div class="zubuz-account-field">
+          <label>Enter your full name</label>
+          <input type="text" placeholder="Adam Smith">
+        </div>
+        <div class="zubuz-account-field">
+          <label>Enter email address</label>
+          <input type="email" placeholder="example@gmail.com">
+        </div>
+        <div class="zubuz-account-field">
+          <label>Enter Password</label>
+          <input type="password" placeholder="Enter Password">
+        </div>
+        <div class="zubuz-account-checkbox">
+          <input type="checkbox" id="check">
+          <label for="check">I have read and accept the </label>
+        </div>
+        <button id="zubuz-account-btn" type="submit"><span>Create account</span></button>
+        <div class="zubuz-or">
+          <p>or</p>
+        </div>
+        <a href="#" class="zubuz-connect-login">
+          <img src="assets/images/icon/google.svg" alt="">
+          Sign up with Google
+        </a>
+        <a href="#" class="zubuz-connect-login">
+          <img src="assets/images/icon/facebook.svg" alt="">
+          Sign up with Facebook
+        </a>
+
+        <div class="zubuz-account-bottom">
+          <p>Already have an account? <a href="sign-in.html">Log in here</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+  
+{% endblock %}

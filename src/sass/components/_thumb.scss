@@ -154,3 +154,13 @@
     display: none;
   }
 }
+
+.zubuz-career-thumb {
+  border-radius: 20px;
+  overflow: hidden;
+  margin-right: 20px;
+  @include max(991px) {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}

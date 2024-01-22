@@ -97,7 +97,7 @@
   
   &--dot {
     animation: dot-keyframes 1.5s infinite ease-in-out;
-    background-color: var(--accent-bg);
+    background-color: var(--primary-bg);
     border-radius: 10px;
     display: inline-block;
     height: 12px;
@@ -163,7 +163,7 @@
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--accent-color);
+  background: var(--secondary-color);
   animation-timing-function: cubic-bezier(0, 1, 1, 0);
 }
 

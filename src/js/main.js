@@ -4,19 +4,18 @@
   /*------------------------------------------------------------------
   [Table of contents]
 
-zubuz PRELOADER JS INIT
-zubuz SKILLBAR JS INIT
-zubuz MENU SIDEBAR JS INIT
-zubuz COUNTER JS INIT
-zubuz IMAGE ROTATE JS INIT
-zubuz AUTO SLIDER JS INIT
-zubuz PROJECT SLIDER JS INIT
-zubuz PROJECT SLIDER2 JS INIT
-zubuz MAGNIFIC POPUP JS INIT
-zubuz IMAGE SWIPE HOVER JS INIT
-zubuz PRICING TABLE JS INIT
-zubuz MAP JS
-zubuz wow js
+ZUBUZ PRELOADER JS INIT
+ZUBUZ STICKY MENU JS INIT
+ZUBUZ COUNTER JS INIT
+ZUBUZ BRAND SLIDER ONE
+ZUBUZ BRAND SLIDER TWO
+ZUBUZ BRAND SLIDER THREE
+ZUBUZ TESTIMONIAL SLIDER
+ZUBUZ MAGNIFIC POPUP JS INIT
+ZUBUZ PRICING TABLE JS INIT
+ZUBUZ WOW JS INIT
+ZUBUZ PORTFOLIO TWO COLUMN JS 
+ZUBUZ PORTFOLIO ONE COLUMN JS 
   
 -------------------------------------------------------------------*/
   
@@ -35,26 +34,14 @@ zubuz wow js
 
 
 /*--------------------------------------------------------------
-zubuz PRELOADER JS INIT
+ZUBUZ PRELOADER JS INIT
 --------------------------------------------------------------*/
 
-  $(".zubuz-preloader-wrap").fadeOut(500);
+$(".zubuz-preloader-wrap").fadeOut(500);
 
-  /*--------------------------------------------------------------
-zubuz SKILLBAR JS INIT
-------------------------------------------------------------*/
-var skillbar = $('.zubuz-skillbar');
-if (skillbar.is_exist()){
-    skillbar.skillBars({
-    from: 0,
-    speed: 4000,
-    interval: 100,
-    decimals: 0,
-  });
-}
- 
+
 /*--------------------------------------------------------------
-zubuz STICKY MENU JS INIT
+ZUBUZ STICKY MENU JS INIT
 --------------------------------------------------------------*/
 $(window).on('scroll', function(){
   if ($(window).scrollTop() > 50) {
@@ -65,20 +52,9 @@ $(window).on('scroll', function(){
 
 });
 
-/*--------------------------------------------------------------
-zubuz MENU SIDEBAR JS INIT
---------------------------------------------------------------*/
-$(".barger-menu").on("click", function (e) {
-  $(".zubuz-sidemenu-column, .offcanvas-overlay").addClass("active");
-  event.preventDefault(e);
-});
-$(".zubuz-sidemenu-close, .offcanvas-overlay").on("click", function () {
-    $(".zubuz-sidemenu-column, .offcanvas-overlay").removeClass("active");
-});
-
 
 /*--------------------------------------------------------------
-zubuz COUNTER JS INIT
+ZUBUZ COUNTER JS INIT
 --------------------------------------------------------------*/
 var zubuz_counter = $('#zubuz-counter');
   if(zubuz_counter.is_exist()){
@@ -115,7 +91,7 @@ var zubuz_counter = $('#zubuz-counter');
 
 
 /*--------------------------------------------------------------
-fugu CLIENT SLIDER
+ZUBUZ BRAND SLIDER ONE
 --------------------------------------------------------------*/
 var zubuz_brand_slider = $('.zubuz-brand-slider');
 if(zubuz_brand_slider.is_exist()){
@@ -151,7 +127,7 @@ if(zubuz_brand_slider.is_exist()){
 }
 
 /*--------------------------------------------------------------
-fugu CLIENT SLIDER
+ZUBUZ BRAND SLIDER TWO
 --------------------------------------------------------------*/
 var zubuz_brand_slider = $('.zubuz-brand-slider2');
 if(zubuz_brand_slider.is_exist()){
@@ -190,7 +166,7 @@ if(zubuz_brand_slider.is_exist()){
 
 
 /*--------------------------------------------------------------
-fugu CLIENT SLIDER
+ZUBUZ BRAND SLIDER THREE
 --------------------------------------------------------------*/
 var zubuz_brand_slider3 = $('.zubuz-brand-slider3');
 if(zubuz_brand_slider3.is_exist()){
@@ -225,10 +201,8 @@ if(zubuz_brand_slider3.is_exist()){
 
 }
 
-
-
 /*--------------------------------------------------------------
-fugu CLIENT SLIDER
+ZUBUZ TESTIMONIAL SLIDER
 --------------------------------------------------------------*/
 var zubuz_t_slider = $('.zubuz-testimonial-slider');
 if(zubuz_t_slider.is_exist()){
@@ -243,11 +217,8 @@ if(zubuz_t_slider.is_exist()){
 
 }
 
-
-
-
 /*--------------------------------------------------------------
-zubuz MAGNIFIC POPUP JS INIT
+ZUBUZ MAGNIFIC POPUP JS INIT
 ------------------------------------------------------------*/
 var popup_youtube = $('.video-init');
   if (popup_youtube.is_exist()){
@@ -259,7 +230,7 @@ var popup_youtube = $('.video-init');
 }
 
 /*--------------------------------------------------------------
-zubuz PRICING TABLE JS INIT
+ZUBUZ PRICING TABLE JS INIT
 ------------------------------------------------------------*/
     // Table BTN Trigger
     $("#l5-pricing-btn .toggle-btn").on("click", function (e) {
@@ -302,85 +273,169 @@ zubuz PRICING TABLE JS INIT
   
   }); // end window resize
   
-  
+/*--------------------------------------------------------------
+ZUBUZ WOW JS INIT
+------------------------------------------------------------*/
+
   $(window).on("load" ,function(){
+
     var wow = new WOW({
-      mobile: true,       // default
-      tablet:true,
-      callback: function(box) {
-        if (box.classList.contains('zubuz_animate')) {
-          box.classList.add("zubuz_card_loaded");
-        }
-      }
+      mobile: false,       // default
+      tablet:false
     });
-    if ( $(window).width() >= 768  ) {
-     wow.init();
+    wow.init();
+
+/*--------------------------------------------------------------
+ZUBUZ PORTFOLIO TWO COLUMN JS 
+------------------------------------------------------------*/
+    var zubuz_portfolio_two_column = $('#zubuz-two-column');
+    if(zubuz_portfolio_two_column.is_exist()){
+    var $container = $(zubuz_portfolio_two_column),
+    colWidth = function () {
+      var w = $container.width(), 
+        columnNum = 1,
+        columnWidth = 0;
+      if (w > 1200) {
+        columnNum  = 2;
+      } else if (w > 900) {
+        columnNum  = 2;
+      } else if (w > 600) {
+        columnNum  = 1;
+      } else if (w > 450) {
+        columnNum  = 1;
+      } else if (w > 385) {
+        columnNum  = 1;
+      }
+      columnWidth = Math.floor(w/columnNum);
+      $container.find('.collection-grid-item').each(function() {
+        var $item = $(this),
+          multiplier_w = $item.attr('class').match(/collection-grid-item-w(\d)/),
+          multiplier_h = $item.attr('class').match(/collection-grid-item-h(\d)/),
+          width = multiplier_w ? columnWidth*multiplier_w[1] : columnWidth,
+          height = multiplier_h ? columnWidth*multiplier_h[1]*0.4-12 : columnWidth*0.5;
+        $item.css({
+          width: width,
+          //height: height
+        });
+      });
+      return columnWidth;
+    },
+    isotope = function () {
+      $container.isotope({
+        resizable: false,
+        itemSelector: '.collection-grid-item',
+        masonry: {
+          columnWidth: colWidth(),
+          gutterWidth: 0
+        }
+      });
+    };
+  isotope();
+  $(window).resize(isotope);
+  var $optionSets = $('.zubuz-portfolio-menu .option-set'),
+      $optionLinks = $optionSets.find('li');
+  $optionLinks.click(function(){
+  var $this = $(this);
+    var $optionSet = $this.parents('.option-set');
+    $optionSet.find('.active').removeClass('active');
+    $this.addClass('active');
+
+    // make option object dynamically, i.e. { filter: '.my-filter-class' }
+    var options = {},
+        key = $optionSet.attr('data-option-key'),
+        value = $this.attr('data-option-value');
+    // parse 'false' as false boolean
+    value = value === 'false' ? false : value;
+    options[ key ] = value;
+    if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+      // changes in layout modes need extra logic
+      changeLayoutMode( $this, options )
+    } else {
+      // creativewise, apply new options
+      $container.isotope( options );
     }
+    return false;
+  });
+}
+
+ /*--------------------------------------------------------------
+ZUBUZ PORTFOLIO ONE COLUMN JS 
+------------------------------------------------------------*/
+ var zubuz_portfolio_one_column = $('#zubuz-one-column');
+ if(zubuz_portfolio_one_column.is_exist()){
+ var $container = $(zubuz_portfolio_one_column),
+ colWidth = function () {
+   var w = $container.width(), 
+     columnNum = 1,
+     columnWidth = 0;
+   if (w > 1200) {
+     columnNum  = 1;
+   } else if (w > 900) {
+     columnNum  = 1;
+   } else if (w > 600) {
+     columnNum  = 1;
+   } else if (w > 450) {
+     columnNum  = 1;
+   } else if (w > 385) {
+     columnNum  = 1;
+   }
+   columnWidth = Math.floor(w/columnNum);
+   $container.find('.collection-grid-item').each(function() {
+     var $item = $(this),
+       multiplier_w = $item.attr('class').match(/collection-grid-item-w(\d)/),
+       multiplier_h = $item.attr('class').match(/collection-grid-item-h(\d)/),
+       width = multiplier_w ? columnWidth*multiplier_w[1] : columnWidth,
+       height = multiplier_h ? columnWidth*multiplier_h[1]*0.4-12 : columnWidth*0.5;
+     $item.css({
+       width: width,
+       //height: height
+     });
+   });
+   return columnWidth;
+ },
+ isotope = function () {
+   $container.isotope({
+     resizable: false,
+     itemSelector: '.collection-grid-item',
+     masonry: {
+       columnWidth: colWidth(),
+       gutterWidth: 0
+     }
+   });
+ };
+isotope();
+$(window).resize(isotope);
+var $optionSets = $('.zubuz-portfolio-menu .option-set'),
+   $optionLinks = $optionSets.find('li');
+$optionLinks.click(function(){
+var $this = $(this);
+ var $optionSet = $this.parents('.option-set');
+ $optionSet.find('.active').removeClass('active');
+ $this.addClass('active');
+
+ // make option object dynamically, i.e. { filter: '.my-filter-class' }
+ var options = {},
+     key = $optionSet.attr('data-option-key'),
+     value = $this.attr('data-option-value');
+ // parse 'false' as false boolean
+ value = value === 'false' ? false : value;
+ options[ key ] = value;
+ if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
+   // changes in layout modes need extra logic
+   changeLayoutMode( $this, options )
+ } else {
+   // creativewise, apply new options
+   $container.isotope( options );
+ }
+ return false;
+});
+}
 
 
   
   }); // End window LODE
 
-/*--------------------------------------------------------------
-zubuz MAP JS
-------------------------------------------------------------*/
-var google_map = $('#map');
-if(google_map.is_exist()){
-  google.maps.event.addDomListener(window, 'load', init);
-  function init() {
-    var mapOptions = {
-        zoom: 11,
-        scrollwheel: false,
-        navigationControl: false,
-        mapTypeControl: false,
-        scaleControl: false,
-        draggable: true,
-        disableDefaultUI: true,
-        center: new google.maps.LatLng(40.6700, -73.9400), 
-         styles: [{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"color":"#f7f1df"}]},{"featureType":"landscape.natural","elementType":"geometry","stylers":[{"color":"#d0e3b4"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"geometry","stylers":[{"color":"#fbd3da"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#bde6ab"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffe15f"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#efd151"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"color":"black"}]},{"featureType":"transit.station.airport","elementType":"geometry.fill","stylers":[{"color":"#cfb2db"}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#a2daf2"}]}]
-                };
-      var mapElement = document.getElementById('map');
 
-      var map = new google.maps.Map(mapElement, mapOptions);
-
-      var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(40.6700, -73.9400),
-        map: map,
-        // icon: 'assets/images/all-img/contact/map.png',
-        title: 'fugu'
-      });
-      var contentString = '<div id="content">' +
-          '<div id="tpw">' +
-          '<h3>fugu' +
-          '</div>';
-
-      var infowindow = new google.maps.InfoWindow({
-          content: contentString,
-          maxWidth: 280
-      });
-
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-      setTimeout(function(){ marker.setAnimation(null); }, 750);  //time it takes for one bounce   
-
-      google.maps.event.addListener(marker, 'click', function () {
-          infowindow.open(map, marker);
-      });
-
-    }
-
-}
-
-//zubuz wow js
-// var wow = new WOW({
-//   mobile: false,       // default
-//   tablet:false
-// });
-// wow.init();
-
-// AOS.init({
-//   duration: 1200,
-// })
-  
 
 
   })(jQuery);

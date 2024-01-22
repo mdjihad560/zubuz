@@ -44,10 +44,6 @@
   }
   &-card{
     position: absolute;
-    transform: scale(0);
-    opacity: 0;
-    visibility: hidden;
-    transition: all .7s ease .7s;
     @include max(767px) {
       display: none;
     }
@@ -99,23 +95,6 @@
 }
 
 }
-.zubuz_card_loaded.card1{
-  transform: scale(1);
-}
-.zubuz_card_loaded.card2{
-  transform: scale(1);
-}
-.zubuz_card_loaded.card3 {
-  transform: scale(1);
-}
-.zubuz_card_loaded.card4{
-  transform: scale(1);
-}
-.zubuz_card_loaded.zubuz-hero-card {
-  opacity: 1;
-  visibility: visible;
-}
-
 
 .zubuz-hero-btn-wrap {
     display: flex;

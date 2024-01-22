@@ -27,9 +27,7 @@
     @include max(767px) {
       height: 150px;
     }
-    h2{
-      color: #fff;
-    }
+    
     p{
       font-weight: 600;
       margin-top: 7px;
@@ -41,7 +39,23 @@
   }
   
 }
-
+.number{
+  color: var(--white-color);
+  font-size: 85px;
+  font-weight: 700;
+  line-height: 1.05em; /* 116.667% */
+  letter-spacing: -0.1px;
+  font-family: $heading-font;
+  @include max(1400px) { 
+    font-size: 60px;
+  }
+  @include max(767px) { 
+    font-size: 48px;
+  }
+  @include max(479px) { 
+    font-size: 36px;
+  }
+}
 
 .zubuz-coming-newsletter {
   max-width: 500px;

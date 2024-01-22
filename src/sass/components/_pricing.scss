@@ -87,7 +87,7 @@
     }
   }
   &-header{
-  margin-bottom: 20px;
+    margin-bottom: 20px;
   }
   &-price{
     display: flex;
@@ -99,6 +99,23 @@
       margin-left: 10px;
       font-size: 16px;
       color: #414141;
+    }
+    .zubuz-price{
+      font-weight: 700;
+      font-size: 85px;
+      line-height: 1.05em; /* 116.667% */
+      letter-spacing: -0.1px;
+      color: var(--heading-color);
+      font-family: $heading-font;
+      @include max(1400px) { 
+        font-size: 60px;
+      }
+      @include max(767px) { 
+        font-size: 48px;
+      }
+      @include max(479px) { 
+        font-size: 36px;
+      }
     }
   }
   &-description{
@@ -186,7 +203,8 @@
         .zubuz-pricing-price p, 
         .zubuz-pricing-description p, 
         .zubuz-pricing-body p, 
-        .zubuz-pricing-body ul li{
+        .zubuz-pricing-body ul li,
+        .zubuz-price{
             color: var(--white-color);
         }
         .zubuz-pricing-description{

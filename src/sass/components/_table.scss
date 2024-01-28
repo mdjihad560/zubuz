@@ -46,3 +46,11 @@
     }
   }
 }
+
+
+[dir="rtl"]{
+	.zubuz-table-wrap table thead tr th, 
+  .zubuz-table-wrap table tbody tr td{
+    text-align: right;
+  }
+}

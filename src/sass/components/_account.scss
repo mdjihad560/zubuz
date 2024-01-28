@@ -182,3 +182,30 @@ a.zubuz-connect-login {
 
   
 }
+
+
+// rtl support
+[dir="rtl"]{
+	.zubuz-errors-wrap{
+    text-align: right;
+  }
+  .zubuz-countdown-wrap, 
+  .zubuz-coming-newsletter, 
+  .zubuz-account-wrap{
+    margin-right: 0;
+  }
+  button#zubuz-notified-btn{
+    right: auto;
+    left: 5px;
+  }
+  a.zubuz-connect-login {
+    img{
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+  .zubuz-account-checkbox label:before{
+    margin-right: 0;
+    margin-left: 10px;
+  }
+}

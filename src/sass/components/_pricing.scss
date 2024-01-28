@@ -247,3 +247,34 @@
   }
 }
 
+
+// rtl support
+[dir="rtl"] {
+  .pricing-btn{
+    justify-content: flex-start;
+  }
+  .zubuz-pricing-price {
+    p{
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+  .zubuz-pricing-body {
+    ul{
+      li{
+        padding-left: 0;
+        padding-right: 30px;
+        img{
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  .zubuz-title-btn{
+    text-align: left;
+    @include max(991px) {
+      text-align: right;
+    }
+  }
+}

@@ -530,3 +530,44 @@ a.comment-reply {
 button#comment-btn{
   margin-top: 26px;
 }
+
+// rtl support
+
+[dir="rtl"]{
+	.post-category a{
+    margin-right: 0;
+    margin-left: 24px;
+  }
+  .post-thumb{
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  button#wp-block-search__button{
+    right: auto;
+    left: 25px;
+  }
+  .post-comment-thumb{
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  a.comment-reply{
+    right: auto;
+    left: 0;
+  }
+  ul.single-list{
+    li{
+      padding-left: 0;
+      padding-right: 18px;
+      &::before{
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+  .post-tag {
+    h3{
+      margin-right: 0;
+      margin-left: 24px;
+    }
+  }
+}

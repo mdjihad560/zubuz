@@ -180,3 +180,24 @@
     letter-spacing: -.5px;
   }
 }
+
+
+[dir="rtl"]{
+  .zubuz-testimonial-author-thumb{
+    margin-right: 0;
+    margin-left: 15px;
+  }
+  .zubuz-testimonial-btn{
+    justify-content: inherit;
+  }
+  .zubuz-testimonial-slider{
+    direction: ltr;
+  }
+  .zubuz-testimonial-slider-author-thumb{
+    margin-right: 0;
+  }
+  .zubuz-testimonial-slider-data, 
+  .zubuz-testimonial-slider-author {
+    text-align: right;
+}
+}

@@ -66,3 +66,25 @@
   }
   
 }
+
+
+// rtl support 
+[dir="rtl"]{
+
+  .zubuz-app-wrap{
+    @include max(991px) {
+      justify-content: inherit;
+    }
+  }
+  .zubuz-cta-shape{
+    right: auto;
+    left: 0;
+  }
+  .zubuz-cta-content{
+    text-align: right;
+    
+  }
+  .zubuz-subscribe-two{
+    margin-right: 0;
+  }
+}

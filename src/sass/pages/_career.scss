@@ -127,3 +127,46 @@
   }
 
 }
+
+
+// rtl support
+[dir="rtl"]{
+	.zubuz-jobs-apply-btn{
+    text-align: left;
+    @include max(991px) {
+      text-align: right;
+    }
+  }
+  .zubuz-jobs-item-content{
+    padding-right: 0;
+    padding-left: 15%;
+    @include max(1199px) {
+      padding-left: 8%;
+    }
+    @include max(991px) {
+      padding-left: 0;
+    }
+  }
+  .zubuz-position-requirement-item {
+    p{
+      padding-left: 0;
+      padding-right: 35px;
+      &::before{
+        left: auto;
+        right: 20px;
+      }
+    }
+  }
+  .zubuz-job-role {
+    ul{
+      li{
+        padding-left: 0;
+        padding-right: 30px;
+        img{
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+}

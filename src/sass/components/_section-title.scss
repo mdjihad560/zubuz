@@ -160,3 +160,43 @@
   }
 }
 
+
+[dir="rtl"]{
+
+  .zubuz-section-title.center{
+    margin-right: 0;
+    text-align: right;
+  }
+  .zubuz-section-title{
+    text-align: right;
+  }
+  .zubuz-default-content{
+    text-align: right;
+  }
+
+  .zubuz-default-content.m-right{
+    margin-right: 0;
+    margin-left: 65px;
+    @include max(1399px) {
+      margin-left: 0;
+    }
+  }
+
+  .zubuz-default-content.m-left {
+    margin-left: 0px;
+    margin-right: 70px;
+    @include max(1399px) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .zubuz-default-content.m-left-85{
+    margin-left: 0;
+    margin-right: 85px;
+    @include max(1399px) {
+      margin: 0;
+    }
+  }
+
+}  

@@ -121,7 +121,7 @@
       text-align: center;
     }
     &.light{
-      border-top: 1px solid var(--body-color);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
   }
 }
@@ -150,7 +150,7 @@
 .zubuz-footer-extra{
   &-top{
     padding: 90px 0 120px;
-    border-bottom: 1px solid var(--body-color);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     @include max(991px) {
       padding: 90px 0 100px;
       text-align: center;
@@ -165,3 +165,52 @@
     }
   }
 }
+
+
+[dir="rtl"]{
+  .extar-margin{
+    margin-left: 0;
+    margin-right: 80px;
+    @include max(1199px) {
+      margin-right: 0;
+    }
+  }
+  .zubuz-subscription-btn {
+    right: auto;
+    left: 5px;
+  }
+  .zubuz-footer-bottom {
+    @include max(767px) {
+      text-align: right;
+    }
+  }
+  .zubuz-footer-bottom.center{
+    text-align: right;
+  }
+
+  .zubuz-footer-btn{
+    text-align: left;
+    @include max(991px) {
+      text-align: right;
+    }
+  }
+  .zubuz-footer-extra-top{
+    @include max(991px) {
+      text-align: right;
+    }
+  }
+  .zubuz-footer-menu.info {
+    ul{
+      li{
+        padding-left: 0;
+        padding-right: 35px;
+        img{
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+  
+}
+  

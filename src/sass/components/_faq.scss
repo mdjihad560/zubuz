@@ -8,6 +8,7 @@
     }
     @include max(991px) {
       margin-top: 40px;
+      margin-right: 0;
     }
   }
   &-item{
@@ -120,5 +121,25 @@
     path{
       transition: all 0.4s;
     }
+  }
+}
+
+// rtl support
+
+[dir="rtl"]{
+  .zubuz-accordion-wrap{
+    margin-right: 0;
+    margin-left: 65px;
+    @include max(1199px) {
+      margin-left: 20px;
+    }
+    @include max(991px) {
+      margin-left: 0;
+    }
+  }
+  .zubuz-active-icon, 
+  .zubuz-inactive-icon{
+    right: auto;
+    left: 0;
   }
 }

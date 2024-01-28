@@ -168,3 +168,28 @@
   }
   
 }
+
+
+// rtl support
+
+[dir="rtl"]{
+  .zubuz-iconbox-wrap-left .zubuz-iconbox-icon{
+    margin-right: 0;
+    margin-left: 24px;
+  }
+  .zubuz-iconbox-wrap.center, 
+  .zubuz-iconbox-wrap-left{
+    text-align: right;
+  }
+  .zubuz-iconbox-wrap.center .zubuz-iconbox-icon{
+    margin-right: 0;
+    text-align: right;
+  }
+  .zubuz-iconbox-btn:hover img {
+    transform: translateX(-90px);
+  }
+  .zubuz-iconbox-number{
+    margin-right: 0;
+    margin-left: 24px;
+  }  
+}

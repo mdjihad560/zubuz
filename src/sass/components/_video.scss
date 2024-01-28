@@ -79,6 +79,10 @@
     border-radius: 20px;
     border: 1px solid var(--light-color);
     background-color: var(--white-bg);
+    @include max(479px) {
+      padding: 20px;
+      border-radius: 10px;
+    }
   }
   &-wrap{
     border-radius: 20px;
@@ -104,4 +108,11 @@ img.video-sevice {
     width: 75px;
   }
   
+}
+
+[dir="rtl"]{
+  .zubuz-hero-video img{
+    margin-right: 0;
+    margin-left: 10px;
+  }
 }

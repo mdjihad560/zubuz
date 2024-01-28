@@ -31,14 +31,52 @@ ZUBUZ PORTFOLIO ONE COLUMN JS
   
   $(function(){
 
+    var selector = '.active-bg';
+
+    $(selector).on('click', function(){
+        $(selector).removeClass('active');
+        $(this).addClass('active');
+    });
+
+/*--------------------------------------------------------------
+ZUBUZ RTL JS INIT
+--------------------------------------------------------------*/
+    const bodyEl = document.querySelector('body')
+    const btnEl = document.querySelector('#zubuz-ltr-rtl')
+    btnEl.addEventListener('click', () => {
+      const dir = (bodyEl.getAttribute('dir') === 'rtl') ? 'ltr' : 'rtl'
+      bodyEl.setAttribute('dir', dir)
+    }, false)
 
 
+/*--------------------------------------------------------------
+ZUBUZ MENU SIDEBAR JS INIT
+--------------------------------------------------------------*/
+$(".zubuz-rtl-open").on("click", function (e) {
+  $(".zubuz-sidemenu-column, .offcanvas-overlay").addClass("active");
+  event.preventDefault(e);
+});
+$(".zubuz-sidemenu-close, .offcanvas-overlay").on("click", function () {
+    $(".zubuz-sidemenu-column, .offcanvas-overlay").removeClass("active");
+});
+
+/*--------------------------------------------------------------
+ZUBUZ MENU SIDEBAR JS INIT
+--------------------------------------------------------------*/
+$(".add").on("click", function (e) {
+  $(".cursor, .cursor2").addClass("active");
+  event.preventDefault(e);
+});
+$(".remove").on("click", function () {
+    $(".cursor, .cursor2").removeClass("active");
+});
+
+ 
 /*--------------------------------------------------------------
 ZUBUZ PRELOADER JS INIT
 --------------------------------------------------------------*/
 
 $(".zubuz-preloader-wrap").fadeOut(500);
-
 
 /*--------------------------------------------------------------
 ZUBUZ STICKY MENU JS INIT

@@ -1,0 +1,146 @@
+
+.zubuz-sidemenu-wraper {
+  position: relative;
+}
+
+
+.zubuz-sidemenu-column {
+  width: 250px;
+  display: block;
+  position: fixed;
+  z-index: 111;
+  padding: 30px;
+  margin-right: -250px;
+  transition: 0.5s;
+  right: 0;
+  top: 300px;
+  direction: ltr;
+  background-color: var(--dark-bg);
+  
+}
+.zubuz-sidemenu-column.active {
+    margin-right: 0px;
+    z-index: 9999;
+}
+.zubuz-sidemenu-item{
+  p{
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    color: var(--white-color);
+  }
+}
+.value-change-btn{
+  display: flex;
+  gap: 10px;
+  span{
+    width: 90px;
+    font-size: 15px;
+    line-height: 1;
+    padding: 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    background-color: var(--light-bg);
+    &:first-child{
+      margin-left: 0;
+    }
+    &:last-child{
+      margin-left: 0;
+    }
+  }
+}
+.active-bg.active{
+  span{
+    background-color: var(--secondary-color);
+  }
+  
+}
+.zubuz-sidemenu-item{
+  margin-bottom: 24px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+.zubuz-cursor-btn{
+  display: flex;
+  gap: 10px;
+  .value-change-btn span{
+    text-transform: capitalize;
+  }
+}
+.zubuz-sidemenu-close {
+  position: absolute;
+  opacity: 0;
+  line-height: 1;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active .zubuz-sidemenu-close{
+  opacity: 1;
+  visibility: visible;
+}
+
+.zubuz-open-close-btn{
+  width: 45px;
+  height: 45px;
+  right: 250px;
+  top: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--dark-bg);
+  transform: translateY(-50%);
+  svg{
+    width: 24px;
+  }
+  path{
+    stroke: var(--white-color);
+  }
+}
+.zubuz-rtl-open{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.active .zubuz-rtl-open{
+  opacity: 0;
+}
+
+
+
+.cursor.active {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 1px solid var(--dark-bg);
+  transition: all 200ms ease-out;
+  position: fixed;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  z-index: 99999;
+  transform: translate(calc(-50% + 15px), -50%);
+}
+
+.cursor2.active {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: black;
+  opacity: .3;
+  position: fixed;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width .3s, height .3s, opacity .3s;
+}

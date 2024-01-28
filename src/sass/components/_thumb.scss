@@ -164,3 +164,66 @@
     margin-bottom: 40px;
   }
 }
+
+// rtl support
+[dir="rtl"]{
+  .zubuz-thumb.thumb-pr {
+    padding-left: 100px;
+    padding-right: 0;
+    @include max(991px) {
+      padding: 0;
+    }
+  }
+
+
+  .zubuz-thumb.thumb-pl{
+    padding-right: 100px;
+    padding-left: 0;
+    @include max(991px) {
+      padding: 0;
+    }
+  }
+
+  .zubuz-v2-thumb.thumb-mr{
+    margin-right: 0;
+    margin-left: 65px;
+    @include max(1199px) {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+    @include max(991px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+  .zubuz-v2-thumb.thumb-ml{
+    margin-left: 0;
+    margin-right: 65px;
+    @include max(1199px) {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+    @include max(991px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .zubuz-v3-thumb{
+    margin-right: 0;
+    margin-left: 27px;
+    @include max(991px) {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .zubuz-v3-card, 
+  .zubuz-v3-card2 {
+    @include max(1299px) {
+      left: auto;
+    }
+    
+}
+
+}

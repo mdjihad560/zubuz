@@ -84,3 +84,19 @@
     }
   }
 }
+
+// rtl support
+[dir="rtl"]{
+	.zubuz-social-icon.social-box.small-box.position {
+    right: auto;
+    left: 20px;
+  }
+  .zubuz-team-skill ul li{
+    padding-left: 0;
+    padding-right: 20px;
+    &:before{
+      left: auto;
+      right: 0;
+    }
+  }
+}

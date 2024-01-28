@@ -299,3 +299,49 @@ span.zubuz-title-shape {
     padding-bottom: 80px;
   }
 }
+
+// hero rtl
+
+[dir="rtl"]{
+  .zubuz-hero-content.center{
+    margin-right: 0;
+    text-align: right;
+    padding-bottom: 130px;
+    p{
+      margin-right: 0;
+    }
+  }
+  .zubuz-hero-content{
+    text-align: right;
+  }
+  .zubuz-hero-btn-wrap.center{
+    justify-content: inherit;
+  }
+  // End hero v1
+  .zubuz-hero-section2{
+    overflow: hidden;
+  }
+  .zubuz_screenfix_right{
+    direction: ltr;
+  }
+  .zubuz-hero-rating ul{
+    justify-content: flex-end;
+    
+  }
+  .zubuz-hero-btn-wrap.center{
+    align-items: flex-start;
+  }
+  .zubuz-hero-btn-wrap{
+    align-items: flex-end;
+  }
+  .zubuz-subscribe-three{
+    margin-right: 0;
+    input{
+      padding-right: 65px!important;
+    }
+  }
+  .zubuz-input-email{
+    left: auto;
+    right: 24px;
+  }
+}

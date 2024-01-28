@@ -31,3 +31,15 @@
     padding-bottom: 80px;
   }
 }
+
+
+// rtl support
+[dir="rtl"]{
+  .zubuz-brand-slider, 
+  .zubuz-brand-slider3{
+    direction: ltr;
+  }
+  .zubuz-brand-logo-wrap p{
+    text-align: right;
+  }
+}
